@@ -43,8 +43,9 @@ const agegrouperror = document.querySelector('.agegrouperror');
 const validation = (check)=>{
 grossIncomeerror.innerHTML = '';
 extraincomeerror.innerHTML = '';
-deductionerror.innerHTML='';
 agegrouperror.innerHTML = '';
+deductionerror.innerHTML='';
+
 
    if(!numberPattern.test(grossIncome.value)){
    grossIncomeerror.innerHTML = `<abbr title="Please enter number"><img src="exclamation.png" width="20px" class="notation">
@@ -54,14 +55,16 @@ if(!numberPattern.test(extraIncome.value)){
     extraincomeerror.innerHTML = `<abbr title="Please enter number"><img src="exclamation.png" width="20px" class="notation">
            </abbr>`
 }
+
+if(selectedvalue === null){
+   agegrouperror.innerHTML = `<abbr title="Please enter age"><img src="exclamation.png" width="20px" class="notation">
+          </abbr>`
+}
 if(!numberPattern.test(deduction.value)){
     deductionerror.innerHTML = `<abbr title="Please enter number"><img src="exclamation.png" width="20px" class="notation">
            </abbr>`
 }
-if(selectedvalue === null){
-    agegrouperror.innerHTML = `<abbr title="Please enter number"><img src="exclamation.png" width="20px" class="notation">
-           </abbr>`
-}
+
 }
 
 
