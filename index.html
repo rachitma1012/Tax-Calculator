@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--container for whole form-->
+    <div class="outer-container container">
+        <div class="inner-container">
+            <!--from start-->
+            <form id="form">
+                <!--div containing extra info regarding the label and input tag for annual income-->
+                <div>
+                    <label for="grossincome">Enter gross annual income</label>
+                    <img src="question.png"  class="notation info" onmouseover="add(0)" onmouseout="remove(0)">
+                    <span class="details hidden extrainfo">Gross annual income is your total salary in a year before any deductions</span><br>
+                 <!--div containing input tag-->
+                    <div class="inputtag"><input  id="grossincome" type="text" name="grossincome" placeholder="Enter gross annual income" onkeyup="validation(true)">
+                   <!--div for if incoorect value fill in the form-->
+                        <div class="grossincome-error">
+                        
+                </div>
+                </div>
+                </div>
+
+                <!--div containg extra information regarfing the label and input tag for extra income-->
+                <div>
+                    <label for="extraincome">Enter extra income</label>
+                    <img src="question.png"  class="notation" onmouseover="add(1)" onmouseout="remove(1)">
+                    <span class="details hidden extra">Extra annual income is your total salary in a year before any deductions</span><br>
+                    <!--div containg input tag for rxtra income-->
+                    <div class="inputtag"><input id="extraincome"  type="text" name="extraincome" placeholder="  Enter extra income from other sources" onkeyup="validation(true)">
+                    <!--div if inappropriate value filled in the extra income input tag-->
+                        <div class="extraincomeerror">
+                        
+                    </div>
+                    </div>
+                
+                    </div>
+                    <!--div contain the label and agegroup of the people-->
+                <div> 
+                    <label for="agegroup">Enter gross annual income</label>
+                    <img src="question.png"  class="notation" onmouseover="add(2)" onmouseout="remove(2)">
+                    <span class="details hidden agegroup-tax">Age group income is your total salary in a year before any deductions</span><br>
+                    <!--div containing the  select tag for different age-->
+                    <div class="select-container"><select id="agegroup" name="agegroup" type="number" onkeyup="validation(true)">
+                        <option value="select"></option>
+                        <option value="lessthanforty">&lt;40</option>
+                        <option value="greaterthanforty">&#8805; 40 &amp; &lt; 60</option>
+                        <option value="greaterthansixty">&#8805;60</option>
+                    </select>
+                    <!--div contain the error realted to the select element-->
+                    <div class="agegrouperror">
+                   
+                    </div>
+                </div>
+                </div>
+                <!--div contain deduction element-->
+                <div>
+
+                    <label for="deduction">Enter total applicable deduction</label>
+                    <img src="question.png"  class="notation" onmouseover="add(3)" onmouseout="remove(3)">
+                    <span class="details hidden incomededuction">Deduction in the income</span><br>
+                    <!--div contains the input tag related to the deduction-->
+                    <div class="inputtag"><input id="deduction" type="text" name="deduction" placeholder="  Add total applicable deductions" onkeyup="validation(true)">
+                    <!--div for containg the error related to the deduvtion input box-->
+                        <div class="deductionerror">
+                      
+                </div>
+                    </div>
+
+               
+                    </div>
+                    <!--button tag for submitting the form-->
+                <button class="btn-btn" type="submit" onclick="incometax()">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js">
+                     
+    </script>
+</body>
+</html>
+
