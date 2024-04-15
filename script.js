@@ -82,19 +82,19 @@ if(selectedvalue === null){
                 inhand = 0.3*(totalinc-800000);
                 totalinc = totalinc-inhand;
                 finalresult(totalinc)
-                console.log(totalinc)
+                
              }
              if(selectedvalue === "greaterthanforty"){
                 inhand = 0.4*(totalinc-800000);
                 totalinc = totalinc-inhand;
                 finalresult(totalinc)
-                console.log(totalinc)
+                
              }
              if(selectedvalue === "greaterthansixty"){
                 inhand = 0.1*(totalinc-800000);
                 totalinc = totalinc-inhand;
                 finalresult(totalinc)
-                console.log(totalinc)
+                
              }
       }
     }
@@ -112,9 +112,13 @@ if(selectedvalue === null){
     <h2>${finale}</h2>
     <h3>after tax deduction</h3>
     <div class="close-btn">
-        <a href="/"><button type="submit" class="btn-btn-close">Close</button></a>
+        <button type="submit" class="btn-btn-close" onclick = 'refresh()'>Close</button>
     </div>
 </div>
 </div>`
         
+      }
+
+      function refresh(){
+         history.go(0)
       }
